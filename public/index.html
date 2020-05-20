@@ -4,40 +4,93 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta name="description" content="Web site created using create-react-app"/>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/src/App.css">
+   
+    <title>Jot.It</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="#"><i class="fa fa-fw fa-chart-line"></i> Progress</a>
+    </div>
+  
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+  
+      <a href="#">Today</a>
+      <a href="#">This Week</a>
+      <a href="#">This Month</a>
+      <a href="#">Inspiration</a>
+      <a href="#">Folder</a>
+      <button>Logout</button>
+    </div>
+  
+      <h1>Jot.It</h1>
+      <h2> Writing Prompt</h2>
+      <p>
+        Make sure to take time out for yourself each day</p>
+  
+  
+        <p> Say aloud: I am confident in my abilities to complete this 
+        project because I have all the tools I need within.
+      </p>
+      <p>
+        Take a moment to make a list of actions you can 
+        take to stay on track.
+      </p>
+  
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <script type="text/babel">
+      const element = <h1>A Writer Always Kiss and Tells</h1>; ReactDOM.render(element, document.getElementById("root"));
+      </script>
+    
+      </script>
+    
+      <script>
+        const element = React.createElement('h1', null, 'Jot.It');
+        ReactDOM.render(
+          element,
+          document.getElementById('root')
+          
+        );
+      </script>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+          <div class="container">
+  <div id="container" class="col-md-8 col-md-offset-2">  </div>
+</div>  
+  
+<script src="https://fb.me/react-15.1.0.js"></script>
+<script src="https://fb.me/react-dom-15.1.0.js"></script>
+<script src="https://unpkg.com/axios@0.14.0/dist/axios.min.js"></script>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<div id="myDIV" class="header">
+  <h2>Jot.It for writers</h2>
+  <input type="text" id="myInput" placeholder="jot your thoughts...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+<ul id="myUL">
+  <li>create a timeline</li>
+  <li class="checked">get an accountability partner</li>
+  <li>follow daily wwriting prompts</li>
+  <li>write a chapter a week</li>
+  <li>Read a book that will inspire you</li>
+  <li>practice breathing</li>
+</ul>
+
   </body>
 </html>
